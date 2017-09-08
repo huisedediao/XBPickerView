@@ -79,7 +79,6 @@
             make.top.mas_equalTo(pickerView_f_cellHeight + pickerView_f_btnHeight);
             make.trailing.equalTo(self);
         }];
-        label.text = D11_Text_mins;
         label.textColor = [UIColor blackColor];
         label.textAlignment = NSTextAlignmentCenter;
         _lb_text = label;

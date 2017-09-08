@@ -26,6 +26,7 @@
     return self;
 }
 
+
 #pragma mark - UIPickerView 代理和数据源
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -45,7 +46,10 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    self.selectedIndex = row;
+    XBPickerViewIndexset indexSet;
+    indexSet.row = row;
+    indexSet.component = 0;
+    self.selectedIndexset = indexSet;
 }
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel* pickerLabel = (UILabel*)view;

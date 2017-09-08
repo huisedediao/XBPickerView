@@ -13,13 +13,13 @@
 
 @protocol XBPickerViewDelegate <NSObject>
 
-- (void)pickerView:(XBPickerView *)pickerView doneClickAtIndex:(NSInteger)index;
+- (void)pickerView:(XBPickerView *)pickerView doneClickAtIndexset:(XBPickerViewIndexset)indexset;
 
 @end
 
 @interface XBPickerView : XBAlertViewBase
 @property (nonatomic,strong) NSArray *arr_datasource;
-@property (nonatomic,assign) NSInteger selectedIndex;
+@property (nonatomic,assign) XBPickerViewIndexset selectedIndexset;
 @property (nonatomic,strong) UIPickerView *pv_choose;
 @property (nonatomic,weak) id<UIPickerViewDelegate,UIPickerViewDataSource> pickerDelegate;
 @property (nonatomic,weak) id<XBPickerViewDelegate>delegate;

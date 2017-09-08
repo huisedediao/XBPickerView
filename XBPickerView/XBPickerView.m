@@ -17,6 +17,11 @@
 
 @implementation XBPickerView
 
+- (void)setSelectedIndexset:(XBPickerViewIndexset)selectedIndexset
+{
+    _selectedIndexset = selectedIndexset;
+    [self.pv_choose selectRow:selectedIndexset.row inComponent:selectedIndexset.component animated:YES];
+}
 
 - (void)show
 {
@@ -78,9 +83,9 @@
         btn_done.spaceToContentSide = D11_float_leadingSpace;
         btn_done.block = ^(XBCusBtn *weakBtn) {
             [weakSelf hidden];
-            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(pickerView:doneClickAtIndex:)])
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(pickerView:doneClickAtIndexset:)])
             {
-                [weakSelf.delegate pickerView:weakSelf doneClickAtIndex:self.selectedIndex];
+                [weakSelf.delegate pickerView:weakSelf doneClickAtIndexset:self.selectedIndexset];
             }
         };
         self.btn_done = btn_done;

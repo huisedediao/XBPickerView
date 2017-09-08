@@ -9,6 +9,12 @@
 #ifndef XBPickerViewHeader_h
 #define XBPickerViewHeader_h
 
+typedef struct{
+    NSInteger component;
+    NSInteger row;
+}XBPickerViewIndexset;
+
+
 #define pickerView_f_PickerViewHeight (200)
 #define pickerView_f_btnHeight (50)
 #define pickerView_f_cellHeight (50)

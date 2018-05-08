@@ -173,10 +173,10 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    XBPickerViewIndexset indexSet;
-    indexSet.row = row;
-    indexSet.component = 0;
-    self.selectedIndexset = indexSet;
+//    XBPickerViewIndexset indexSet;
+//    indexSet.row = row;
+//    indexSet.component = 0;
+//    self.selectedIndexset = indexSet;
 }
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel* pickerLabel = (UILabel*)view;

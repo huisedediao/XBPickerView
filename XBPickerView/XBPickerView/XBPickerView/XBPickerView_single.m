@@ -100,7 +100,7 @@
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(ScreenWidth * 0.5);
             make.height.mas_equalTo(pickerView_f_cellHeight);
-            make.top.mas_equalTo(pickerView_f_cellHeight + pickerView_f_btnHeight);
+            make.centerY.equalTo(self).offset(pickerView_f_cellHeight * 0.5);
             make.trailing.equalTo(self);
         }];
         label.textColor = [UIColor blackColor];

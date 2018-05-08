@@ -31,17 +31,12 @@
 //    };
 //    [pickerView show];
     XBPickerView_single *pickerView = [[XBPickerView_single alloc] initWithDisplayView:[[UIApplication sharedApplication].delegate window]];
-    NSArray *num = @[@60,@70,@80,@90,@100];
-    NSMutableArray *arrM = [NSMutableArray new];
-    for (NSNumber *tempNum in num)
-    {
-        NSString *temp = [NSString stringWithFormat:@"%zds",[tempNum integerValue]];
-        [arrM addObject:temp];
-    }
-    pickerView.arr_datasource =arrM;
+    NSArray *num = @[@"60",@"70",@"80",@"90",@"100"];
+    pickerView.arr_datasource = num;
     pickerView.bl_done = ^(XBPickerView *pickerView, NSArray *array) {
 
     };
+    pickerView.lb_text.text = @"s";
     [pickerView show];
 }
 

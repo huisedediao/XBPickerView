@@ -7,7 +7,8 @@
 //
 
 #import "XBPickerView_single.h"
-#import "XBHeader.h"
+#import "Masonry.h"
+//#import "XBHeader.h"
 
 @interface XBPickerView_single () <UIPickerViewDelegate,UIPickerViewDataSource>
 
@@ -24,6 +25,30 @@
         self.lb_text.backgroundColor = self.lb_text.backgroundColor;
     }
     return self;
+}
+
+- (void)show
+{
+    [super show];
+    
+    WEAK_SELF
+    self.btn_done.block = ^(XBCusBtn *weakBtn) {
+        [weakSelf hidden];
+        
+        NSInteger row = [weakSelf.pv_choose selectedRowInComponent:0];
+        NSString *dateStr = [weakSelf.arr_datasource objectAtIndex:row];
+        NSArray *arr = @[dateStr];
+        
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(pickerView:doneClickWithStrArr:)])
+        {
+            [weakSelf.delegate pickerView:weakSelf doneClickWithStrArr:arr];
+        }
+        
+        if (weakSelf.bl_done)
+        {
+            weakSelf.bl_done(weakSelf, arr);
+        }
+    };
 }
 
 
@@ -74,7 +99,7 @@
         UILabel *label = [UILabel new];
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(kScreenWidth * 0.5);
+            make.width.mas_equalTo(ScreenWidth * 0.5);
             make.height.mas_equalTo(pickerView_f_cellHeight);
             make.top.mas_equalTo(pickerView_f_cellHeight + pickerView_f_btnHeight);
             make.trailing.equalTo(self);

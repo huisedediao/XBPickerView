@@ -30,6 +30,8 @@
 {
     [self createSubviews];
     
+    self.hideWhileTouchOtherArea = NO;
+    
     WEAK_SELF
     
     self.showLayoutBlock = ^(XBAlertViewBase *alertView) {

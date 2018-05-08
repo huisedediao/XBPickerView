@@ -167,6 +167,10 @@
 {
     return self.arr_datasource[component][row];
 }
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+    return 80;
+}
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
     return pickerView_f_cellHeight;

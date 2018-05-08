@@ -34,7 +34,7 @@
 		F114E7E120A1A96B004955B3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F114E7D520A1A96B004955B3 /* MASViewConstraint.m */; };
 		F114E7E220A1A96B004955B3 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F114E7D620A1A96B004955B3 /* MASViewAttribute.m */; };
 		F114E7E320A1A96B004955B3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F114E7D720A1A96B004955B3 /* README.md */; };
-		F114E7E720A1A9A6004955B3 /* XBCusBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F114E7E520A1A9A6004955B3 /* XBCusBtn.m */; };
+		F114E7F220A1C428004955B3 /* XBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F114E7F020A1C427004955B3 /* XBButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +114,8 @@
 		F114E7D520A1A96B004955B3 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		F114E7D620A1A96B004955B3 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		F114E7D720A1A96B004955B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F114E7E520A1A9A6004955B3 /* XBCusBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBCusBtn.m; sourceTree = "<group>"; };
-		F114E7E620A1A9A6004955B3 /* XBCusBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBCusBtn.h; sourceTree = "<group>"; };
+		F114E7F020A1C427004955B3 /* XBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBButton.m; sourceTree = "<group>"; };
+		F114E7F120A1C427004955B3 /* XBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +166,7 @@
 		F114E76F20A1A8D5004955B3 /* XBPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				F114E7E420A1A9A6004955B3 /* XBCusBtn */,
+				F114E7EF20A1C427004955B3 /* XBButton */,
 				F114E7BB20A1A96B004955B3 /* Masonry */,
 				F114E7AA20A1A90E004955B3 /* XBAlertViewBase */,
 				F114E7A220A1A8F6004955B3 /* XBPickerView */,
@@ -273,13 +273,14 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
-		F114E7E420A1A9A6004955B3 /* XBCusBtn */ = {
+		F114E7EF20A1C427004955B3 /* XBButton */ = {
 			isa = PBXGroup;
 			children = (
-				F114E7E520A1A9A6004955B3 /* XBCusBtn.m */,
-				F114E7E620A1A9A6004955B3 /* XBCusBtn.h */,
+				F114E7F020A1C427004955B3 /* XBButton.m */,
+				F114E7F120A1C427004955B3 /* XBButton.h */,
 			);
-			path = XBCusBtn;
+			name = XBButton;
+			path = ../../../XBButton/DrawTest/DrawTest/XBButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +421,7 @@
 				F114E7D920A1A96B004955B3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F114E7A820A1A8F7004955B3 /* XBPickerView_single.m in Sources */,
 				F114E7E020A1A96B004955B3 /* MASConstraint.m in Sources */,
+				F114E7F220A1C428004955B3 /* XBButton.m in Sources */,
 				F114E7E120A1A96B004955B3 /* MASViewConstraint.m in Sources */,
 				F114E7DA20A1A96B004955B3 /* ViewController+MASAdditions.m in Sources */,
 				F114E7E220A1A96B004955B3 /* MASViewAttribute.m in Sources */,
@@ -434,7 +436,6 @@
 				F114E7B720A1A90E004955B3 /* XBAlertViewBase.m in Sources */,
 				F114E7B620A1A90E004955B3 /* UIView+AdaptKeyboard.m in Sources */,
 				F114E7DE20A1A96B004955B3 /* NSArray+MASAdditions.m in Sources */,
-				F114E7E720A1A9A6004955B3 /* XBCusBtn.m in Sources */,
 				F114E78020A1A8D5004955B3 /* main.m in Sources */,
 				F114E77220A1A8D5004955B3 /* AppDelegate.m in Sources */,
 				F114E7A920A1A8F7004955B3 /* XBPickerView.m in Sources */,

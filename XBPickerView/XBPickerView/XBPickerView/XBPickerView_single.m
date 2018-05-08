@@ -8,7 +8,6 @@
 
 #import "XBPickerView_single.h"
 #import "Masonry.h"
-//#import "XBHeader.h"
 
 @interface XBPickerView_single () <UIPickerViewDelegate,UIPickerViewDataSource>
 
@@ -32,7 +31,7 @@
     [super show];
     
     WEAK_SELF
-    self.btn_done.block = ^(XBCusBtn *weakBtn) {
+    self.btn_done.bl_click = ^(XBButton *weakBtn) {
         [weakSelf hidden];
         
         NSInteger row = [weakSelf.pv_choose selectedRowInComponent:0];

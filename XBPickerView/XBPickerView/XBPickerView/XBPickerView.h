@@ -7,7 +7,7 @@
 //
 
 #import "XBAlertViewBase.h"
-#import "XBCusBtn.h"
+#import "XBButton.h"
 #import "XBPickerViewHeader.h"
 
 @class XBPickerView;
@@ -21,8 +21,8 @@ typedef void (^XBPickerViewDoneBlock)(XBPickerView *pickerView,NSArray *array);
 @end
 
 @interface XBPickerView : XBAlertViewBase
-@property (nonatomic,strong) XBCusBtn *btn_cancel;
-@property (nonatomic,strong) XBCusBtn *btn_done;
+@property (nonatomic,strong) XBButton *btn_cancel;
+@property (nonatomic,strong) XBButton *btn_done;
 @property (nonatomic,assign) NSInteger i_rowCount;
 @property (nonatomic,strong) NSArray *arr_datasource;
 @property (nonatomic,assign) XBPickerViewIndexset selectedIndexset;

@@ -56,18 +56,18 @@
     
     if (self.btn_cancel == nil)
     {
-        XBCusBtn *btn_cancel = [XBCusBtn new];
+        XBButton *btn_cancel = [XBButton new];
         [self addSubview:btn_cancel];
         [btn_cancel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.leading.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(ScreenWidth * 0.25, pickerView_f_btnHeight));
         }];
-        btn_cancel.titleFont = XB_Font(18);
-        btn_cancel.titleNormal = XB_text_Cancel;
-        btn_cancel.titleColorNormal = XB_color_dark;
-        btn_cancel.contentSide = XBCusBtnSideLeft;
-        btn_cancel.spaceToContentSide = XB_float_leadingSpace;
-        btn_cancel.block = ^(XBCusBtn *weakBtn) {
+        btn_cancel.font_title = XB_Font(18);
+        btn_cancel.str_titleNormal = XB_text_Cancel;
+        btn_cancel.color_titleNormal = XB_color_dark;
+        btn_cancel.enum_contentSide = XBBtnSideLeft;
+        btn_cancel.f_spaceToContentSide = XB_float_leadingSpace;
+        btn_cancel.bl_click = ^(XBButton *weakBtn) {
             [weakSelf hidden];
         };
         self.btn_cancel = btn_cancel;
@@ -75,18 +75,18 @@
 
     if (self.btn_done == nil)
     {
-        XBCusBtn *btn_done = [XBCusBtn new];
+        XBButton *btn_done = [XBButton new];
         [self addSubview:btn_done];
         [btn_done mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.trailing.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(ScreenWidth * 0.25, pickerView_f_btnHeight));
         }];
-        btn_done.titleFont = XB_Font(18);
-        btn_done.titleNormal = XB_text_Done;
-        btn_done.titleColorNormal = XB_color_blue;
-        btn_done.contentSide = XBCusBtnSideRight;
-        btn_done.spaceToContentSide = XB_float_leadingSpace;
-        btn_done.block = ^(XBCusBtn *weakBtn) {
+        btn_done.font_title = XB_Font(18);
+        btn_done.str_titleNormal = XB_text_Done;
+        btn_done.color_titleNormal = XB_color_blue;
+        btn_done.enum_contentSide = XBBtnSideRight;
+        btn_done.f_spaceToContentSide = XB_float_leadingSpace;
+        btn_done.bl_click = ^(XBButton *weakBtn) {
             [weakSelf hidden];
             NSMutableArray *arrM = [NSMutableArray new];
             for (int i = 0; i < weakSelf.arr_datasource.count; i++)

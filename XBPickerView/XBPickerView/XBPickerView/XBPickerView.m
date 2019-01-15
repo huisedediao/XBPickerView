@@ -9,6 +9,8 @@
 #import "XBPickerView.h"
 #import "Masonry.h"
 
+#define kSafeBottomHeigt (([UIScreen mainScreen].bounds.size.height >= 812.f) ? 34 : 0)
+
 @interface XBPickerView () <UIPickerViewDelegate,UIPickerViewDataSource>
 
 @end
@@ -37,7 +39,7 @@
     self.showLayoutBlock = ^(XBAlertViewBase *alertView) {
         [alertView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.leading.trailing.bottom.equalTo(alertView.superview);
-            make.height.mas_equalTo(pickerView_f_cellHeight * weakSelf.i_rowCount + pickerView_f_btnHeight);
+            make.height.mas_equalTo(pickerView_f_cellHeight * weakSelf.i_rowCount + pickerView_f_btnHeight  + kSafeBottomHeigt);
         }];
     };
     self.hiddenLayoutBlock = ^(XBAlertViewBase *alertView) {
@@ -74,7 +76,7 @@
         };
         self.btn_cancel = btn_cancel;
     }
-
+    
     if (self.btn_done == nil)
     {
         XBButton *btn_done = [XBButton new];
@@ -179,10 +181,10 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-//    XBPickerViewIndexset indexSet;
-//    indexSet.row = row;
-//    indexSet.component = 0;
-//    self.selectedIndexset = indexSet;
+    //    XBPickerViewIndexset indexSet;
+    //    indexSet.row = row;
+    //    indexSet.component = 0;
+    //    self.selectedIndexset = indexSet;
 }
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel* pickerLabel = (UILabel*)view;

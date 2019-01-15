@@ -121,7 +121,8 @@
         [self addSubview:pickerView];
         [pickerView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).offset(pickerView_f_btnHeight);
-            make.leading.trailing.bottom.equalTo(self);
+            make.leading.trailing.equalTo(self);
+            make.bottom.equalTo(self).offset(- kSafeBottomHeigt);
         }];
         pickerView.delegate = self;
         pickerView.dataSource = self;
@@ -133,7 +134,7 @@
         [self addSubview:line1];
         line1.backgroundColor = lineColor;
         [line1 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self).offset(pickerView_f_cellHeight * (self.i_rowCount / 2) + pickerView_f_btnHeight);
+            make.top.equalTo(self->_pv_choose.mas_centerY).offset(- pickerView_f_cellHeight * 0.5);
             make.leading.trailing.equalTo(self);
             make.height.mas_equalTo(0.5);
         }];
@@ -142,7 +143,7 @@
         [self addSubview:line2];
         line2.backgroundColor = lineColor;
         [line2 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self).offset(pickerView_f_cellHeight * (self.i_rowCount / 2 + 1) + pickerView_f_btnHeight);
+            make.top.equalTo(self->_pv_choose.mas_centerY).offset(pickerView_f_cellHeight * 0.5);
             make.leading.trailing.equalTo(self);
             make.height.mas_equalTo(0.5);
         }];

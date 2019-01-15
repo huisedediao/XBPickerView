@@ -34,11 +34,11 @@ typedef struct{
 #define PNGIMAGE(NAME)      [UIImage imageNamed:NAME]
 
 //======================================== font ========================================
-#define XB_Font(x)                                         [UIFont systemFontOfSize:x]
-//#define XB_Font_bold(x)                                    [UIFont boldSystemFontOfSize:x]
-#define XB_Font_Text(x)                                    kFontText(x)
-#define XB_Font_Title(x)                                   kFontTitle(x)
-#define XB_Font_btn(x)                                     kFontButton(x)
+#define XBPickerView_Font(x)                                         [UIFont systemFontOfSize:x]
+//#define XBPickerView_Font_bold(x)                                    [UIFont boldSystemFontOfSize:x]
+#define XBPickerView_Font_Text(x)                                    kFontText(x)
+#define XBPickerView_Font_Title(x)                                   kFontTitle(x)
+#define XBPickerView_Font_btn(x)                                     kFontButton(x)
 
 
 //屏幕宽高
@@ -60,18 +60,18 @@ label.frame.size.width;\
 
 
 
-#define XB_text_Cancel                                     NSLocalizedString(@"Cancel", nil)
-#define XB_text_Default                                    NSLocalizedString(@"Default", nil)
-#define XB_text_Done                                       NSLocalizedString(@"Done", nil)
+#define XBPickerView_text_Cancel                                     NSLocalizedString(@"Cancel", nil)
+#define XBPickerView_text_Default                                    NSLocalizedString(@"Default", nil)
+#define XBPickerView_text_Done                                       NSLocalizedString(@"Done", nil)
 
 
 
-#define XB_color_dark                                      RGB(127,127,127)
-#define XB_color_blue                                      RGBA(241, 174, 76, 1)
+#define XBPickerView_color_dark                                      RGB(127,127,127)
+#define XBPickerView_color_done                                      RGBA(241, 174, 76, 1)
 
 
 
-#define XB_float_leadingSpace (15)
+#define XBPickerView_float_leadingSpace (15)
 
 
 

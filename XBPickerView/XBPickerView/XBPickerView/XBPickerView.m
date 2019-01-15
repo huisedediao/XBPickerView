@@ -64,11 +64,11 @@
             make.top.leading.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(ScreenWidth * 0.25, pickerView_f_btnHeight));
         }];
-        btn_cancel.font_title = XB_Font(18);
-        btn_cancel.str_titleNormal = XB_text_Cancel;
-        btn_cancel.color_titleNormal = XB_color_dark;
+        btn_cancel.font_title = XBPickerView_Font(18);
+        btn_cancel.str_titleNormal = XBPickerView_text_Cancel;
+        btn_cancel.color_titleNormal = XBPickerView_color_dark;
         btn_cancel.enum_contentAlign = XBBtnAlignLeft;
-        btn_cancel.f_spaceOfContentAndBorderForAlign = XB_float_leadingSpace;
+        btn_cancel.f_spaceOfContentAndBorderForAlign = XBPickerView_float_leadingSpace;
         btn_cancel.bl_click = ^(XBButton *weakBtn) {
             [weakSelf hidden];
         };
@@ -83,11 +83,11 @@
             make.top.trailing.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(ScreenWidth * 0.25, pickerView_f_btnHeight));
         }];
-        btn_done.font_title = XB_Font(18);
-        btn_done.str_titleNormal = XB_text_Done;
-        btn_done.color_titleNormal = XB_color_blue;
+        btn_done.font_title = XBPickerView_Font(18);
+        btn_done.str_titleNormal = XBPickerView_text_Done;
+        btn_done.color_titleNormal = XBPickerView_color_done;
         btn_done.enum_contentAlign = XBBtnAlignRight;
-        btn_done.f_spaceOfContentAndBorderForAlign = XB_float_leadingSpace;
+        btn_done.f_spaceOfContentAndBorderForAlign = XBPickerView_float_leadingSpace;
         btn_done.bl_click = ^(XBButton *weakBtn) {
             [weakSelf hidden];
             NSMutableArray *arrM = [NSMutableArray new];
